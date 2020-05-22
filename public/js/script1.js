@@ -10,7 +10,7 @@ weatherform.addEventListener('submit', (event) => {
         document.querySelector('#temperature').textContent = 'Loading...';
         document.querySelector('#description').textContent = ''; 
 
-        fetch('http://localhost:3000/weather?location=' + search_loc).then((response) => {
+        fetch('/weather?location=' + search_loc).then((response) => {
         response.json().then((data) => {
             if(data.errorfound){
                 document.querySelector('#temperature').textContent = 'ERROR: ' + data.errorfound;

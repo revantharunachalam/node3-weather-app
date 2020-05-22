@@ -8,6 +8,7 @@ const geocode = require('./geocode');
 const weather = require('./weather')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Including a path another directory
 const publicPath = path.join(__dirname, "../public"); 
@@ -89,8 +90,8 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("The server is up");
+app.listen(port, () => {
+    console.log(`The server is up in port ${port}`);
 })
 
 
