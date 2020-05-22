@@ -18,7 +18,7 @@ weatherform.addEventListener('submit', (event) => {
             }
             else{
                 document.querySelector('#temperature').textContent = 'TEMPERATURE: ' + data.temperature;
-                document.querySelector('#description').textContent = `DESCRIPTION: The climate is ${data.climate} and this will feelslike ${data.feellike} degree Celsius in ${search_loc}`;
+                document.querySelector('#description').textContent = `DESCRIPTION: The climate is ${data.climate} and this will feelslike ${data.feellike} degree Celsius. ${search_loc} is covered by ${data.cloudcover}% of clouds.`;
             }
         })
         })  

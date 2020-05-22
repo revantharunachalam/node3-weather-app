@@ -62,7 +62,7 @@ app.get("/weather", (req, res) => {
         }
         // WEATHERSTACK
 
-        weather(geodata.latitude,geodata.longitude, (error, {climate, temperature, feellike}) => {
+        weather(geodata.latitude,geodata.longitude, (error, {climate, temperature, feellike, cloudcover}) => {
             if(error){
                 return res.send({
                     errorfound: "WEATHERSTACK ERROR: " + error});
@@ -70,7 +70,8 @@ app.get("/weather", (req, res) => {
             res.send({
                 climate: climate,
                 temperature: temperature,
-                feellike: feellike});
+                feellike: feellike,
+                cloudcover: cloudcover});
         })
     })
 })

@@ -16,7 +16,8 @@ const weather = (latitude, longitude, callbackwet) => {
             callbackwet(null, {
                 temperature: body.current.temperature,
                 feellike: body.current.feelslike,
-                climate: body.current.weather_descriptions[0]
+                climate: body.current.weather_descriptions[0],
+                cloudcover: body.current.cloudcover
             });
         }
     })
