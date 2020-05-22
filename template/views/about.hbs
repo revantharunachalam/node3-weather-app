@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About page</title>
+        <link rel="icon" href="https://img.icons8.com/material/4ac144/256/user-male.png">
+        <link rel="stylesheet" href="./css/style1.css">
+    </head>
+    <body>
+        <div class="main_content">
+            {{>header}}
+            <h1>This is an about page</h1>
+            <img class="portrait" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
+            <p>
+                <span>My name is {{name}}</span>
+                <span>I am {{age}} old</span>
+            </p>
+        </div>
+        {{>footer}}
+    </body>
+</html>
